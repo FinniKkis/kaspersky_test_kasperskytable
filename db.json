@@ -1,0 +1,149 @@
+{
+  "groups": [
+    {
+      "id": "1",
+      "name": "Руководство",
+      "description": "Топ-менеджмент компании"
+    },
+    {
+      "id": "2",
+      "name": "Бухгалтерия",
+      "description": "Финансовый отдел"
+    },
+    {
+      "id": "3",
+      "name": "Отдел кадров",
+      "description": "HR-департамент"
+    },
+    {
+      "id": "4",
+      "name": "Разработка",
+      "description": "Инженеры и разработчики"
+    },
+    {
+      "id": "5",
+      "name": "Маркетинг",
+      "description": "Отдел маркетинга и рекламы"
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Иванов Алексей",
+      "email": "ivanov@corp.ru",
+      "role": "Директор",
+      "groupId": 1,
+      "status": "active",
+      "createdAt": "2022-01-10"
+    },
+    {
+      "id": "2",
+      "name": "Петрова Мария",
+      "email": "petrova@corp.ru",
+      "role": "Финансовый директор",
+      "groupId": 1,
+      "status": "active",
+      "createdAt": "2022-02-15"
+    },
+    {
+      "id": "3",
+      "name": "Сидоров Николай",
+      "email": "sidorov@corp.ru",
+      "role": "Главный бухгалтер",
+      "groupId": 2,
+      "status": "active",
+      "createdAt": "2022-03-20"
+    },
+    {
+      "id": "4",
+      "name": "Козлова Ольга",
+      "email": "kozlova@corp.ru",
+      "role": "Бухгалтер",
+      "groupId": 2,
+      "status": "active",
+      "createdAt": "2022-04-05"
+    },
+    {
+      "id": "5",
+      "name": "Новиков Дмитрий",
+      "email": "novikov@corp.ru",
+      "role": "HR-менеджер",
+      "groupId": 3,
+      "status": "active",
+      "createdAt": "2022-05-12"
+    },
+    {
+      "id": "6",
+      "name": "Морозова Светлана",
+      "email": "morozova@corp.ru",
+      "role": "HR-специалист",
+      "groupId": 3,
+      "status": "inactive",
+      "createdAt": "2022-06-18"
+    },
+    {
+      "id": "7",
+      "name": "Волков Андрей",
+      "email": "volkov@corp.ru",
+      "role": "Senior Developer",
+      "groupId": 4,
+      "status": "active",
+      "createdAt": "2022-07-22"
+    },
+    {
+      "id": "9",
+      "name": "Соколов Игорь",
+      "email": "sokolov@corp.ru",
+      "role": "Backend Dev",
+      "groupId": 4,
+      "status": "active",
+      "createdAt": "2022-09-14"
+    },
+    {
+      "id": "10",
+      "name": "Попова Елена",
+      "email": "popova@corp.ru",
+      "role": "Маркетолог",
+      "groupId": 5,
+      "status": "active",
+      "createdAt": "2022-10-01"
+    },
+    {
+      "id": "11",
+      "name": "Зайцев Михаил",
+      "email": "zaycev@corp.ru",
+      "role": "SMM-менеджер",
+      "groupId": 5,
+      "status": "inactive",
+      "createdAt": "2022-11-07"
+    },
+    {
+      "id": "12",
+      "name": "Орлов Сергей",
+      "email": "orlov@corp.ru",
+      "role": "Стажёр",
+      "groupId": null,
+      "status": "active",
+      "createdAt": "2023-01-15"
+    },
+    {
+      "id": "13",
+      "name": "Фёдорова Анна",
+      "email": "fedorova@corp.ru",
+      "role": "Консультант",
+      "groupId": null,
+      "status": "active",
+      "createdAt": "2023-02-20"
+    },
+    {
+      "id": "14",
+      "name": "Тихонов Роман",
+      "email": "tikhonov@corp.ru",
+      "role": "Аналитик",
+      "groupId": null,
+      "status": "inactive",
+      "createdAt": "2023-03-10"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

@@ -1,0 +1,379 @@
+.page { display: flex; flex-direction: column; gap: 20px; }
+
+/* ── Тулбар ── */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.searchIconBtn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 0;
+}
+
+.searchWrap {
+  position: relative;
+  flex: 1;
+}
+
+.search {
+  width: 100%;
+  padding: 12px 36px 12px 18px;
+  border: 1px solid #121212;
+  border-radius: 12px;
+  background: var(--white);
+  outline: none;
+  font-size: 14px;
+  font-family: 'Montserrat', sans-serif;
+  color: var(--text);
+  transition: border-color var(--transition);
+}
+.search::placeholder { color: #9ca3af; }
+.search:focus { border-color: var(--primary); }
+
+.clearSearch {
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 12px;
+  padding: 2px 4px;
+}
+.clearSearch:hover { color: var(--danger); }
+
+/* ── Кастомный дропдаун ── */
+.dropdown {
+  position: relative;
+  flex-shrink: 0;
+}
+
+.dropdownTrigger {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  background: #121212;
+  color: #ffffff;
+  padding: 0 18px;
+  border-radius: 12px;
+  font-size: 14px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  white-space: nowrap;
+  transition: background var(--transition);
+}
+.dropdownTrigger:hover { background: #2a2a2a; }
+
+.dropdownMenu {
+  position: absolute;
+  top: calc(100% + 6px);
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #121212;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,.12);
+  min-width: 160px;
+  z-index: 50;
+  overflow: hidden;
+}
+
+.dropdownItem {
+  padding: 11px 18px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text);
+  transition: background var(--transition);
+}
+.dropdownItem:hover { background: var(--primary-lt); }
+.dropdownItemActive { color: var(--primary); font-weight: 700; }
+
+/* ── Обёртка таблицы + выступ ── */
+.tableOuter {
+  position: relative;
+}
+
+.addBtnFloat {
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 3;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  line-height: 0;
+  transition: transform var(--transition), opacity var(--transition);
+}
+.addBtnFloat:hover { transform: scale(1.08); opacity: .85; }
+
+.tableBorderSvg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+/* ── Таблица ── */
+.tableWrap {
+  background: var(--white);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+/* Строка шапки */
+.headRow {
+  background: linear-gradient(#121212, #121212) no-repeat 10px bottom / calc(100% - 70px) 1px;
+}
+.headRow th {
+  height: 50px;
+  box-sizing: border-box;
+}
+
+.th, .thNum, .thDel {
+  padding: 14px 16px;
+  text-align: left;
+  font-weight: 600;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .6px;
+  color: #9ca3af;
+  white-space: nowrap;
+}
+
+.thNum { width: 48px; }
+.thDel { width: 48px; }
+
+.thSortable {
+  cursor: pointer;
+  user-select: none;
+  display: table-cell;
+}
+.thSortable:hover { color: #6b7280; }
+.thSortable > svg { margin-left: 6px; vertical-align: middle; }
+.thActive { color: #121212; }
+
+.row {
+  background: linear-gradient(#e5e7eb, #e5e7eb) no-repeat 10px bottom / calc(100% - 20px) 1px;
+  transition: background var(--transition);
+}
+.row:last-child {
+  background-image: none;
+}
+
+.row td { padding: 14px 16px; vertical-align: middle; }
+
+.tdNum {
+  color: #9ca3af;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.tdName {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-width: 200px;
+}
+
+.avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--primary);
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.nameText {
+  font-weight: 600;
+  color: var(--text);
+}
+
+.tdEmail {
+  color: #9ca3af;
+  font-size: 13px;
+}
+
+.tdRole {
+  font-weight: 700;
+  color: var(--text);
+}
+
+.tdDate {
+  color: #9ca3af;
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.tdDel { width: 48px; }
+
+.groupBadge {
+  background: #DBEAFE;
+  color: #1D4ED8;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.noGroup { color: #9ca3af; font-size: 13px; }
+
+.statusOn {
+  background: #d1fae5;
+  color: #065f46;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.statusOff {
+  background: #f3f4f6;
+  color: #6b7280;
+  padding: 4px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.btnDelete {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background var(--transition);
+}
+.btnDelete:hover { background: #fee2e2; }
+.btnDelete:hover svg path { fill: var(--danger); }
+
+.empty {
+  text-align: center;
+  padding: 60px;
+  color: var(--text-muted);
+  font-size: 15px;
+}
+
+/* ── Спиннер ── */
+.center { display: flex; justify-content: center; align-items: center; min-height: 300px; flex-direction: column; gap: 16px; }
+.spinner {
+  width: 36px;
+  height: 36px;
+  border: 3px solid var(--border);
+  border-top-color: var(--primary);
+  border-radius: 50%;
+  animation: spin .7s linear infinite;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.errorMsg { text-align: center; color: var(--danger); line-height: 1.8; }
+
+/* ── Оверлей / Модалка ── */
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 16px;
+  animation: fadeIn .15s ease;
+}
+@keyframes fadeIn { from { opacity:0 } to { opacity:1 } }
+
+.modal {
+  background: var(--white);
+  border-radius: 20px;
+  width: 100%;
+  max-width: 500px;
+  box-shadow: 0 20px 50px rgba(0,0,0,.25);
+  animation: slideUp .2s ease;
+}
+@keyframes slideUp { from { transform: translateY(16px); opacity:0 } to { transform:none; opacity:1 } }
+
+.modalHead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--border);
+}
+.modalHead h2 { font-size: 18px; font-weight: 700; }
+.closeBtn { font-size: 18px; color: var(--text-muted); padding: 4px 8px; border-radius: 6px; }
+.closeBtn:hover { background: #f3f4f6; }
+
+.form { padding: 20px 24px; display: flex; flex-direction: column; gap: 14px; }
+
+.field { display: flex; flex-direction: column; gap: 5px; }
+.field label { font-size: 13px; font-weight: 600; color: var(--text); }
+.field input, .field select {
+  padding: 10px 14px;
+  border: 1px solid #121212;
+  border-radius: 12px;
+  background: var(--white);
+  outline: none;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  transition: border-color var(--transition);
+}
+.field input:focus, .field select:focus { border-color: var(--primary); }
+.inputErr { border-color: var(--danger) !important; }
+.err { font-size: 12px; color: var(--danger); }
+
+.modalActions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  padding: 0 24px 24px;
+}
+
+.btnCancel {
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: 600;
+  font-family: 'Montserrat', sans-serif;
+  border: 1px solid #121212;
+  color: var(--text-muted);
+  transition: background var(--transition);
+}
+.btnCancel:hover { background: #f3f4f6; }
+
+.btnSave {
+  padding: 10px 22px;
+  background: var(--primary);
+  color: #fff;
+  border-radius: 20px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  transition: background var(--transition);
+}
+.btnSave:hover { background: var(--primary-dk); }
+
+.btnDanger {
+  padding: 10px 22px;
+  background: var(--danger);
+  color: #fff;
+  border-radius: 20px;
+  font-weight: 700;
+  font-family: 'Montserrat', sans-serif;
+  transition: opacity var(--transition);
+}
+.btnDanger:hover { opacity: .88; }

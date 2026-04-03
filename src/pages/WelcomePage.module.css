@@ -1,0 +1,103 @@
+.page {
+  display: flex;
+  justify-content: center;
+  padding: 40px 0;
+}
+
+/* ── Обёртка карточки ── */
+.cardOuter {
+  position: relative;
+  width: 100%;
+  max-width: 980px;
+}
+
+/* ── Карточка ── */
+.card {
+  background: var(--white);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── Основной контент карточки ── */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 64px 80px 48px;
+  gap: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* ── Заголовок ── */
+.label {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--text);
+}
+
+/* ── Подзаголовок ── */
+.sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 24px;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+.bumpArea {
+  height: 78px;
+  width: 100%;
+}
+
+/* ── Ряд кнопок ── */
+.buttonsRow {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+}
+
+.btn {
+  flex: 1;
+  height: 68px;
+  background: #121212;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 24px;
+  letter-spacing: .3px;
+  border-radius: 20px;
+  transition: opacity var(--transition);
+}
+.btn:hover { opacity: .85; }
+
+.bumpGap {
+  width: 78px;
+  flex-shrink: 0;
+}
+
+.borderSvg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  overflow: visible;
+}
+
+.choseIcon {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  pointer-events: none;
+}
