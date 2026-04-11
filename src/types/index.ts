@@ -1,8 +1,0 @@
-export interface Cat {
-  id: string;
-  url: string;
-  width?: number;
-  height?: number;
-}
-
-export type Tab = 'all' | 'favorites';
